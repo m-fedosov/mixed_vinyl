@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Новый трек | {{ parent()}}{% endblock %}
+
+{% block body %}
+
+    <h1>{{ title }}</h1>
+
+    {# список треков на мотивацию #}
+
+    <br>
+
+    <p>+ мотивация:</p>
+
+    <ul>
+    {% for track in tracks %}
+    <li>{{ track.by }} - {{ track.name }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
