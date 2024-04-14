@@ -3,8 +3,8 @@
 @import '~@fontsource/roboto-condensed';
 
 body {
-    background-color: #17242C;
-    color: #fff;
+    background-color: #e5ca89;
+    color: #110d0d;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -17,18 +17,12 @@ body {
 }
 
 .song-details {
-    background-color: #222F36;
+    background-color: #fa3543;
+    color: #ffffff;
     border-radius: 5px;
-    padding: 5px;
+    padding:5px;
 }
 
 .genre-list li {
     margin-right: 5px;
-}
-
-.mixed-vinyl-container {
-    background: rgb(23,36,44);
-    background: linear-gradient(180deg, rgba(23,36,44,1) 1%, rgba(34,47,54,1) 97%);
-    border-radius: 5px;
-
 }

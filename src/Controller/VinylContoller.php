@@ -13,18 +13,8 @@ class VinylContoller extends AbstractController
     public function homepage(): Response
     {
         $params = [];
-        $params['title'] = 'Мотивация надо поднять';
         $params['tracks'] = [
-            ['by' => 'Bon Jovi', 'name' => 'It\'s my life'],
-            ['by' => 'Kanye West', 'name' => 'Stronger'],
-            ['by' => 'Gangsta\'s Paradise', 'name' => 'Coolio'],
-            ['by' => 'Waterfalls', 'name' => 'TLC'],
-            ['by' => 'Creep', 'name' => 'TLC'],
-            ['by' => 'Kiss from a Rose', 'name' => 'Seal'],
-            ['by' => 'On Bended Knee', 'name' => 'Boyz II Men'],
-            ['by' => 'Fantasy', 'name' => 'Mariah Carey'],
-            ['by' => 'Take a Bow', 'name' => 'Madonna'],
-            ['by' => 'Another Night', 'name' => 'Real McCoy'],
+            ['by' => 'nProfessor', 'name' => 'Мы пилили монолит'],
         ];
         return $this->render('vinyl/homepage.html.twig', $params);
     }

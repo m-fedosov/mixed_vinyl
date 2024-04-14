@@ -1,46 +1,58 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ title ? 'Genre ' ~ title|title : 'All Genres' }}{% endblock %}
+{% block title %}{{ title ? 'Пол ' ~ title|title : 'О проекте' }}{% endblock %}
 
 {% block body %}
 <div class="container">
-    <h1>Browse Vinyl Mixes</h1>
+    <blockquote>"Не важно что под капотом, важно кто водтель"</blockquote>
+    <cite>Доминик Торенто</cite>
+    <br>
+    <img src="{{ asset('img/torento.jpeg') }}" width="300">
 
-    <h2 class="mt-5 mb-4">Filter by {{ title ? title|title : 'Genre' }}</h2>
-    <ul class="genre-list ps-0 mt-2 mb-3">
+    <h2 class="mt-5 mb-4">Выберите пол {{ title ? '- Оп, обновился маршрут 🌚 /browse/' ~ title|title : '' }}</h2>
+    <ul class="genre-list ps-0 mt-2 mb-6">
         <li class="d-inline">
-            <a class="btn btn-primary btn-sm" href={{ path('app_browse', {genre:'pop'})}}>Pop</a>
+            <a class="btn btn-primary btn-sm" href={{ path('app_browse', {genre:'women'})}}>Женский 🏄‍♀️</a>
         </li>
         <li class="d-inline">
-            <a class="btn btn-primary btn-sm" href={{ path('app_browse', {genre:'rock'})}}>Rock</a>
+            <a class="btn btn-primary btn-sm" href={{ path('app_browse', {genre:'parket'})}}>Паркет 🪵</a>
         </li>
         <li class="d-inline">
-            <a class="btn btn-primary btn-sm" href={{ path('app_browse', {genre:'heavy-metal'})}}>Heavy Metal</a>
+            <a class="btn btn-primary btn-sm" href={{ path('app_browse', {genre:'makartni'})}}>Маккартни 🕺</a>
+        </li>
+        <li class="d-inline">
+            <a class="btn btn-primary btn-sm" href={{ path('app_browse', {genre:'second'})}}>Второго</a>
+        </li>
+        <li class="d-inline">
+            <a class="btn btn-primary btn-sm" href={{ path('app_browse', {genre:'kingdom'})}}>Царства 👑</a>
+        </li>
+        <li class="d-inline">
+            <a class="btn btn-primary btn-sm" href={{ path('app_browse', {genre:'lunch'})}}>дник 🫠</a>
         </li>
     </ul>
 
     <div>
-        <h2 class="mt-5">Mixes</h2>
+        <h2 class="mt-5">Стек</h2>
         <div class="row">
             <div class="col col-md-4">
                 <div class="mixed-vinyl-container p-3 text-center">
-                    <img src="https://via.placeholder.com/300" data-src="https://via.placeholder.com/300" alt="Square placeholder img">
-                    <p class="mt-2"><strong>PB & Jams</strong></p>
-                    <span>14 Tracks</span> | <span>Rock</span>
+                    <img src="{{ asset('img/doshik.jpg') }}" width="300">
+                    <p class="mt-2"><strong>Дошик говяжий</strong></p>
+                    <span>Лапша: пшеничная мука в/с, пальмовое масло, модифицированный крахмал, соль, пищевая добавка эмульгатор (сорбит, соевое масло, лецитины), клейковина, комплексная пищевая добавка «премикс» (карбонат калия, гуаровая камедь, полифосфат натрия, рибофлавин), экстракт-приправа (сахар, экстракт дрожжей, растительный протеин, лук, порошок соевого соуса), сушеная ламинария (порошок), лук сушеный, краситель «бета-каротин»; Бульон-приправа: бульонная основа (перец красный, соус соевый, молочная сыворотка, мальтодекстрин, порошок овощного бульона, чеснок, соевая паста, порошок бульона из говядины, масло красного перца, перец черный, ароматизатор «говядина», экстракт паприки, карамельный колер), сахар, глюкоза; Приправа из сушеных овощей: соевый текстура, морковь, лук, водоросли сушеные (хлопья).</span>
                 </div>
             </div>
             <div class="col col-md-4">
                 <div class="mixed-vinyl-container p-3 text-center">
-                    <img src="https://via.placeholder.com/300" data-src="https://via.placeholder.com/300" alt="Square placeholder img">
-                    <p class="mt-2"><strong>Put a Hex on your Ex</strong></p>
-                    <span>8 Tracks</span> | <span>Heavy Metal</span>
+                    <img src="{{ asset('img/cool_cola.jpg') }}" width="300">
+                    <p class="mt-2"><strong>Cool Cola</strong></p>
+                    <span>Вода подготовленная, сахар. Краситель сахарный колер IV, регуляторы кислотности – ортофосфорная кислота, лимонная кислота, натуральные ароматизаторы, кофеин (менее 150 мг/л), экстракт ванили.</span>
                 </div>
             </div>
             <div class="col col-md-4">
                 <div class="mixed-vinyl-container p-3 text-center">
-                    <img src="https://via.placeholder.com/300" data-src="https://via.placeholder.com/300" alt="Square placeholder img">
-                    <p class="mt-2"><strong>Spice Grills - Summer Tunes</strong></p>
-                    <span>10 Tracks</span> | <span>Pop</span>
+                    <img src="{{ asset('img/symfony_logo.png') }}" width="300">
+                    <p class="mt-2"><strong>Траекратно переваренный PHP</strong></p>
+                    <span>Routes, Smart Routes, Controllers & Responses; Wildcard Routes; Symfony Flex; The Twig Service & Profiler for API Requests; JSON API; Encore Recipe; Stimulus; Turbo; Symfony-Docker</span>
                 </div>
             </div>
         </div>
